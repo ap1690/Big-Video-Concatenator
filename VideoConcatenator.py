@@ -6,6 +6,7 @@ for i in link:
   yt = pytube.YouTube(i)
   stream = yt.streams.first()
   stream.download()
+#Put audio=False in VideoFileClip if dont want to process audio
 clip_1 = VideoFileClip("video1.mp4")
 clip_2 = VideoFileClip("video2.mp4")
 final_clip = concatenate_videoclips([clip_1,clip_2])
